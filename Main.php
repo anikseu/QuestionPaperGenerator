@@ -86,7 +86,7 @@ $uinfo=mysqli_fetch_assoc($ses_sql);
 
        <h2>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>,  </h2>
        <p>User Information: <br/>=============<br/> User ID: <?php echo $uinfo['id']; ?> <br/>User Since: <?php echo $uinfo['created_at']; ?><br/><br/>
-        Available permission: <br/>================<br/> Add Questions: <?php if($uinfo['isTeacher']=="1") echo "YES"; else echo "NO";  ?> | Generate Paper: <?php if($uinfo['isMod']=="1") echo "YES"; else echo "NO"; ?> | Download Permission: <?php if($uinfo['isDloader']=="1") echo "YES"; else echo "NO"; ?>
+        Available permission: <br/>================<br/> Add Questions: <?php if($uinfo['isTeacher']=="1") echo "YES"; else echo "NO";  ?> | Generate Paper: <?php if($uinfo['isAdmin']=="1") echo "YES"; else echo "NO"; ?> | Download Permission: <?php if($uinfo['isFetcher']=="1") echo "YES"; else echo "NO"; ?>
       </p>
 
 

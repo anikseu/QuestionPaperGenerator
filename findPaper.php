@@ -95,7 +95,7 @@ $uinfo=mysqli_fetch_assoc($ses_sql);
 
   $id=(int)$searchString; 
   //printf($id); 
-  $fetchpaper=mysqli_query($link, "select questionBody from generatedquestion where gid='$id'");
+  $fetchpaper=mysqli_query($link, "select questionBody from generatedquestion where id='$id'");
   $printQues=mysqli_fetch_row($fetchpaper);
   if(!empty($printQues)){
 
